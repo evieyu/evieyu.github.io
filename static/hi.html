@@ -114,7 +114,7 @@
             .attr('cy', d => yScale(yValue(d)));
         }
 
-        d3.csv('./static/data/hubeinxt.csv').then( data => {
+        d3.csv('./data/hubeinxt.csv').then( data => {
             data = data.filter( d => d['地区'] !== '总计' );
             data.forEach( d => {
                 d['确诊人数'] = +(d['确诊人数']);
